@@ -46,7 +46,7 @@ public class SampleSerialRead {
 		SML_SerialReceiver receiver = new SML_SerialReceiver();
 		receiver.setupComPort("/dev/ttyAMA0");
 
-		for (int j = 0; j < 5; j++) {
+		while (true) {
 
 			SML_File smlFile = receiver.getSMLFile();
 			System.out.println("Got SML_File");
@@ -141,6 +141,6 @@ public class SampleSerialRead {
 
 		}
 
-		receiver.close();
+		//receiver.close();
 	}
 }
