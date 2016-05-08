@@ -45,8 +45,21 @@ public class SampleSerialRead {
 
 	public static void main(String[] args) throws IOException, PortInUseException, UnsupportedCommOperationException {
         System.setProperty("gnu.io.rxtx.SerialPorts", "/dev/ttyAMA0");
-		SML_SerialReceiver receiver = new SML_SerialReceiver();
+		final SML_SerialReceiver receiver = new SML_SerialReceiver();
 		receiver.setupComPort("/dev/ttyAMA0");
+
+		Runtime.getRuntime().addShutdownHook(new Thread()
+		{
+			public void run()
+			{
+				try {
+					receiver.close();
+
+				} catch (IOException e) {
+					System.err.println("Error while trying to close serial port: " + e.getMessage());
+				}
+			}
+		});
 
 		while (true) {
 
@@ -111,7 +124,5 @@ public class SampleSerialRead {
 			System.out.println();
 
 		}
-
-		//receiver.close();
 	}
 }
