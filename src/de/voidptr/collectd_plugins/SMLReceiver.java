@@ -174,11 +174,6 @@ public class SMLReceiver implements CollectdConfigInterface, CollectdInitInterfa
                         }
                     }
                 }
-
-                System.out.println();
-
-
-
             }
         }
     }
