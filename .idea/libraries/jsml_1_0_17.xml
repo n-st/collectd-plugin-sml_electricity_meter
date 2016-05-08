@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="jsml-1.0.17">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jsml/build/libsdeps/jsml-1.0.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jsml/build/libsdeps/rxtxcomm_api-2.2pre2-11_bundle.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/jsml/build/libsdeps/jsml-1.0.17-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/jsml/build/libsdeps/jsml-1.0.17-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
