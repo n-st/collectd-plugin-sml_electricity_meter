@@ -42,8 +42,9 @@ import org.openmuc.jsml.tl.SML_SerialReceiver;
 public class SampleSerialRead {
 
 	public static void main(String[] args) throws IOException, PortInUseException, UnsupportedCommOperationException {
+        System.setProperty("gnu.io.rxtx.SerialPorts", "/dev/ttyAMA0");
 		SML_SerialReceiver receiver = new SML_SerialReceiver();
-		receiver.setupComPort("/dev/ttyS0");
+		receiver.setupComPort("/dev/ttyAMA0");
 
 		for (int j = 0; j < 5; j++) {
 
